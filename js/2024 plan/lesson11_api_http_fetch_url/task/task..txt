@@ -4,8 +4,7 @@
 #whXxOBlYS0H
 - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути список під час відображення.
 
-#qAw3QEJE
-- зробити файл users.html
+
 
 #HEvXD2A
 з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
