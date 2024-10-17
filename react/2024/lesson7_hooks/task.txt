@@ -1,8 +1,9 @@
+Відпочити та дотягнути хвости по минулих лекціях.
+Ця лекція не важлива, але якщо хочете таску, то вона нижчє:
+
 Уважно прочитати і створити хуки яки роблять відповідні дії
 
 1. useToggle - custom React hook that allows a component to toggle a value between true and false
-
-
 2. usePrevious - hook that allows a component to keep track of the previous value of a variable
 
 
