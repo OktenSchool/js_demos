@@ -1,0 +1,13 @@
+
+Create two entities in Mongo for “user” and “color”.
+
+Create a few records with some colors in “color” table.
+
+Create simple form with two fields
+
+“User” input field. Accept text string with the user name and records it to DB.
+“Color” multiselect field. Its populated with the values from “color” table in DB.
+
+Save user data (user name and chosen colors) to DB table “user”
+
+Save project to public repo on github

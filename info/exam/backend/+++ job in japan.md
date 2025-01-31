@@ -1,28 +1,10 @@
-# Task
+# Software developer jobs in Japan for English speakers
 
-In this task you should create nodejs express https server. 
 To understand your task, please read the text below.
-
-## Motivation
 
 Let's create something real and useful.
 This application is inspired by the site [tokyodev](https://www.tokyodev.com/) - the way how software engineers can help each other to find a position in Japan.
 
-
-## Technical requirements
-
-API client is required to test this application.
-Please install app (Postman, Insomnia etc.) on your computer.
-
-Do not forget to install required dependencies to package.json file.
-Use npm libraries such as 'sendmail', 'nodemailer' etc. to send mails to applicants.
-
-_**Note:** If you select library with required auth, do not store your email and password in the code._ 
-_Use placeholders instead: e.g. '\<email>', '\<password>'._
-
-_You can investigate and add a logic to read passwords_
-_from local `config(local).json(yaml) file` (e.g use npm library `conƒig` or do it on your own)_,
-_but this is not required._
 
 
 # Description
@@ -35,7 +17,6 @@ We keep only active positions
 
 ### Available values
 >in case of PUT/POST requests and GET request with query string values with be coersed to available values
-
 Available position categories: `nodejs`, `angular`, `javascript`, `react`.
 
 Available position levels: `junior`, `middle`, `senior`.
@@ -52,7 +33,7 @@ If an applicant has `"japaneseKnowledge": true`, he can receive notifications ab
 If an applicant has `"japaneseKnowledge": false`, he can receive notifications about positions with `"japaneseRequired": false`.
 
 #### Position added
-Examples: 
+Examples:
 
 (a) if an applicant has the following interests:
 
@@ -64,9 +45,9 @@ Examples:
 }
 ```
 he will receive emails about new positions with:
- - `japaneseRequired: false`
- - `category: nodejs`
- - `level: middle`
+- `japaneseRequired: false`
+- `category: nodejs`
+- `level: middle`
 
 (b) if an applicant has the following interests:
 
@@ -78,9 +59,9 @@ he will receive emails about new positions with:
 }
 ```
 he will receive emails about new positions with:
-- `category: nodejs` or `category: react` 
+- `category: nodejs` or `category: react`
 - `"japaneseRequired": true` or `"japaneseRequired": false`,
- - `level: senior`
+- `level: senior`
 
 
 #### Position removed
@@ -88,7 +69,7 @@ he will receive emails about new positions with:
 Examples:
 
 (a) if the following position is removed:
-```json 
+```json
 {
     "category": "nodejs",
     "level": "senior",
@@ -101,7 +82,7 @@ Applicants with (1) `nodejs` in list of categories and (2) level = `senior`  and
 
 
 (b) if the following position is removed:
-```json 
+```json
 {
     "category": "angular",
     "level": "junior",
@@ -110,7 +91,7 @@ Applicants with (1) `nodejs` in list of categories and (2) level = `senior`  and
 }
 ```
 
-Applicants with (1) `angular` in list of categories and (2) level = `junior` 
+Applicants with (1) `angular` in list of categories and (2) level = `junior`
 and (3.1) with `"japaneseKnowledge": true` or (3.2) with `"japaneseKnowledge": false` will be notified
 
 
@@ -144,9 +125,9 @@ Body = ```Position[]```
 ___
 ## GET /positions/{position_id} - Get position details by id
 ### Request
-Example: 
+Example:
 _GET /positions/1_
-### Response 
+### Response
 Success Code _"200 OK"_
 
 Response Body = ```Position[]```
@@ -176,7 +157,6 @@ Success Code *"201 Created"*. "id" in location
 ___
 ## PATCH /positions/{position_id} - Update a position (OPTIONAL)
 >Unlike PUT method, PATCH method applies a partial update to the resource.
-
 ### Request
 Body = ```PositionToPatch```
 
@@ -195,7 +175,7 @@ Success Code: *200 OK*
 ___
 ## DELETE /positions/{position_id} - Close position and delete
 ### Request
-Example: 
+Example:
 _DELETE /positions/1_
 ### Response
 Success Code: *"204 No Content"*
@@ -226,7 +206,6 @@ ___
 ## PUT /applicants/{applicant_id} - Update an application
 Body = ```ApplicantToSet```
 >PUT is a method of modifying resource where the client sends data that updates the entire resource
-
 Example:
 
 _PUT /applicants/1_
@@ -263,8 +242,6 @@ type Position = {
     japaneseRequired: boolean
 }
 ```
-
-
 ### PositionToAdd
 ```ts
 type PositionToAdd = {
@@ -275,16 +252,13 @@ type PositionToAdd = {
     japaneseRequired: boolean
 }
 ```
-
 ### PositionToPatch
-
 ```ts
 type PositionToPatch = {
     japaneseRequired?: boolean,
     description?: string
 }
 ```
-
 ### Applicant
 ```ts
 type Application = {
@@ -294,7 +268,6 @@ type Application = {
     level: string
 }
 ```
-
 ### ApplicantToAdd
 ```ts
 type ApplicationToAdd = {
@@ -304,7 +277,6 @@ type ApplicationToAdd = {
     level: string
 }
 ```
-
 ### ApplicantToSet
 ```ts
 type ApplicationToSet = {
@@ -314,3 +286,10 @@ type ApplicationToSet = {
     level: string
 }
 ```
+## Technical requirements
+
+API client is required to test this application.
+Postman collection with all necessary data  for testing of  your application by teacher is required/
+
+
+_**Note:** do not store your email and password api keys in the code. use seperate .env yaml, properties .etc files for this.
