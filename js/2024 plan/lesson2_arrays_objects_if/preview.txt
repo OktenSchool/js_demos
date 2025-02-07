@@ -6,3 +6,4 @@ JS preview | Модифікація об'єктів
 JS preview | Різниця між примітивами та референціальними типами
 JS preview | Логічні розгалуження if
 JS preview | Логічні розгалуження switch
+JS Preview | Ternary
